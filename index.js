@@ -29,6 +29,9 @@ class Video{
 
     return this
   }
+  getTitle(){
+    return this._data.title
+  }
 }
 
 class VideoThumb{
@@ -46,7 +49,7 @@ class VideoThumb{
     if(descriptionComponent){
       descriptionComponent.hide(() => {
         this.parent.el.append(descriptionComponent.el)
-        descriptionComponent.show()
+        descriptionComponent.show(this.parent.getTitle())
       })
     }
   }
@@ -60,7 +63,8 @@ class DescriptionComponent{
   hide(cb){
     this.el.fadeOut(cb)
   }
-  show(cb){
+  show(title, cb){
+    if(title) this.el.text(title)
     this.el.fadeIn(cb)
   }
 }

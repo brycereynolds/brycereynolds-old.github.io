@@ -1,0 +1,31 @@
+#videos{
+  background: #ececec;
+  padding: 20px;
+  display: block;
+  clear: left;
+}
+
+#videos .video{
+  padding: 10px;
+  margin: 10px;
+  float: left;
+}
+
+#videos .video .thumb{
+  border: 1px solid #CCC;
+}
+
+#description-singleton{
+  display: none;
+  position: absolute;
+  padding: 20px;
+  border: 1px solid #666;
+  background: white;
+}
+
+/* Utitlity Classes */
+.clearfix:after{
+  content: " ";
+  display: block;
+  clear: both;
+}

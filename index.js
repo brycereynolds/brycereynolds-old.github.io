@@ -46,6 +46,10 @@ class VideoThumb{
   clicked(event){
     event.stopPropagation();
 
+    // I don't really like this. In an ideal situation I would have a better
+    // way of registering this event. This would get messy quickly in a real codebase.
+    // One option would be to "decorate" the VideoList with different features and register
+    // those with event handlers (like thumb click, etc)
     if(descriptionComponent){
       descriptionComponent.hide(() => {
         this.parent.el.append(descriptionComponent.el)
